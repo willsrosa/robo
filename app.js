@@ -14,13 +14,13 @@ const { phoneNumberFormatter } = require('./helpers/formatter');
 const port = 2096;
 const urlbase = "https://localhost:2083";
 
-//  var privateKey = fs.readFileSync('selfsigned.key', 'utf8');
-//  var certificate = fs.readFileSync('selfsigned.crt', 'utf8');
-//  var credentials = { key: privateKey, cert: certificate };
+  var privateKey = fs.readFileSync('selfsigned.key', 'utf8');
+  var certificate = fs.readFileSync('selfsigned.crt', 'utf8');
+  var credentials = { key: privateKey, cert: certificate };
 
 const app = express();
-//const server = https.createServer(credentials, app);
-const server = http.createServer(app);
+const server = https.createServer(credentials, app);
+//const server = http.createServer(app);
 
 const io = socketIO(server);
 io.set('origins', '*:*');
