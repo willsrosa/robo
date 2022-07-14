@@ -12,7 +12,7 @@ const http = require('http');
 const fs = require('fs');
 const { phoneNumberFormatter } = require('./helpers/formatter');
 const port = 2096;
-const urlbase = "https://localhost:2083";
+const urlbase = "https://api.itdev.com.br:2083";
 
   var privateKey = fs.readFileSync('private.key', 'utf8');
   var certificate = fs.readFileSync('private.crt', 'utf8');
