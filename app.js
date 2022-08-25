@@ -113,7 +113,7 @@ client.on('message', async msg => {
 
         var data = JSON.stringify({
           "id": msg.selectedRowId,
-          "tipo": "aceitou"
+          "tipo": "recusou"
         });
         
         var config = {
